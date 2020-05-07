@@ -2,22 +2,16 @@
 restoredefaultpath;
 
 % add paths
-addpath(genpath('/vol/ccnlab1/naddij/Analyses/MEGREV/FinalCode'))
-%addpath(genpath('/vol/ccnlab1/naddij/Analyses/ImaMEG'))
-%addpath(genpath('/vol/ccnlab1/naddij/Analyses/Utilities'))
-%addpath(genpath('/vol/ccnlab1/naddij/Analyses/Decoding'))
-
-addpath('/vol/ccnlab1/naddij/fieldtrip-20170801');
-addpath('/vol/ccnlab1/naddij/fieldtrip-20170801/qsub');
-%addpath('/vol/optdcc/fieldtrip-latest/fieldtrip/');
-%addpath('/vol/optdcc/fieldtrip-latest/fieldtrip/qsub');
+addpath('/Decoding')
+addpath('/Utilities')
+addpath('/path/to/fieldtrip'); % add fieldtrip
 
 % set defaultsc
 ft_defaults
 
 % directories
-root = '/vol/ccnlab-scratch1/naddij/ImaMEG'; % datadir - download data from http://hdl.handle.net/11633/di.dcc.DSC_2017.00072_245
-output = '/vol/ccnlab-scratch1/naddij/MEGREV'; % where results will be stored 
+root = '/dir/to/data'; % datadir - download data from http://hdl.handle.net/11633/di.dcc.DSC_2017.00072_245
+output = '/dir/to/output'; % where results will be stored 
 if ~exist(output,'dir'); mkdir(output); end
 cd(output)
 
